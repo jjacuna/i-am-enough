@@ -147,6 +147,7 @@ dialog::backdrop { background: rgba(0,0,0,.9); }
   <div class="wrap bar-in">
     <a class="logo" href="#top" aria-label="Back to top"><img src="assets/wings.png" alt="" width="34" height="22"><span>I AM ENOUGH</span></a>
     <nav class="nav" aria-label="Sections">
+      <a href="#longsleeve">Long sleeve</a>
       <a href="#trailers">Trailers</a>
       <a href="#lookbook">Lookbook</a>
       <a href="#designs" class="opt">Designs</a>
@@ -172,6 +173,21 @@ dialog::backdrop { background: rgba(0,0,0,.9); }
     </div>
   </div>
 </div>
+
+<section class="sec" id="longsleeve">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">New &middot; asked for by a friend</span>
+      <h2>The Long Sleeve</h2>
+      <p class="lede">All black crew neck long sleeve. Small gold wings + I AM ENOUGH on the left chest, over the heart. Tap a photo to see it big.</p>
+    </div>
+    <div class="look">
+      <figure class="tile"><button type="button"><img loading="lazy" decoding="async" src="assets/ls_01.jpg" alt="Desert at sunset, black long sleeve crew with small gold wings and I AM ENOUGH on the left chest" width="880" height="1100"></button><figcaption><b>I AM ENOUGH</b><span>Long sleeve &middot; desert sunset</span></figcaption></figure>
+      <figure class="tile"><button type="button"><img loading="lazy" decoding="async" src="assets/ls_02.jpg" alt="By a bonfire at night, black long sleeve crew with small gold wings on the left chest" width="880" height="1100"></button><figcaption><b>I AM ENOUGH</b><span>Long sleeve &middot; bonfire</span></figcaption></figure>
+      <figure class="tile"><button type="button"><img loading="lazy" decoding="async" src="assets/ls_03.jpg" alt="At a podcast mic, black long sleeve crew with small gold wings on the left chest" width="880" height="1100"></button><figcaption><b>I AM ENOUGH</b><span>Long sleeve &middot; podcast</span></figcaption></figure>
+    </div>
+  </div>
+</section>
 
 <section class="sec" id="trailers">
   <div class="wrap">
@@ -288,7 +304,7 @@ dialog::backdrop { background: rgba(0,0,0,.9); }
 <script>
 (function () {
   var dlg = document.getElementById("zoom");
-  var tiles = Array.prototype.slice.call(document.querySelectorAll("#look .tile"));
+  var tiles = Array.prototype.slice.call(document.querySelectorAll(".look .tile"));
   var cur = 0;
   function show(i) {
     cur = (i + tiles.length) % tiles.length;
